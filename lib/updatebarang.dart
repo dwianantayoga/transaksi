@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './detail_produk.dart'; 
 
 // menggunakan gesture detector dan navigator 
-class ProdukList extends StatelessWidget {
+class Updatebarang extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,12 +10,13 @@ class ProdukList extends StatelessWidget {
         title:
           // menyusun tulisan secara horizontal dan di tengah
             Row(children: <Widget>[
-          new Text("Data Barang",style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+          new Text("Update Data Barang",style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
         ]),
         actions: <Widget>[
           
         ],
       ),
+      
       body: ListView( 
         shrinkWrap: true,
         padding: const EdgeInsets.fromLTRB(2, 10, 2, 10),
@@ -60,7 +61,7 @@ class ProdukList extends StatelessWidget {
             },
             child: ProductBox(
               nama: "DRUM",
-              deskripsi: "Jumlah Stok Barang",
+              deskripsi: "Jumlah Stok Barang ",
               harga: 1500000,
               image: "drum_dua.jpeg",
               star: 0,
@@ -72,7 +73,7 @@ class ProdukList extends StatelessWidget {
                 new MaterialPageRoute(
                     builder: (BuildContext content) => DetailProduk(
                           name: "PIANO",
-                          description: "Jumlah Stok Barang",
+                          description: "Jumlah Stok Barang ",
                           price: 15000000,
                           image: "piano_lima.jpeg",
                           star: 0,
@@ -81,7 +82,7 @@ class ProdukList extends StatelessWidget {
             },
             child: ProductBox(
               nama: "PIANO",
-              deskripsi: "Jumlah Stok Barang ",
+              deskripsi: "Jumlah Stok Barang",
               harga: 15000000,
               image: "piano_lima.jpeg",
               star: 0,
@@ -93,7 +94,7 @@ class ProdukList extends StatelessWidget {
                 new MaterialPageRoute(
                     builder: (BuildContext content) => DetailProduk(
                           name: "SEXOPHONE",
-                          description: "Jumlah Stok Barang",
+                          description: "Jumlah Stok Barang ",
                           price: 600000,
                           image: "sexophone_empat.jpeg",
                           star: 0,
@@ -102,7 +103,7 @@ class ProdukList extends StatelessWidget {
             },
             child: ProductBox(
               nama: "SEXAPHONE",
-              deskripsi: "Jumlah Stok Barang",
+              deskripsi: "Jumlah Stok Barang ",
               harga: 600000,
               image: "sexophone_empat.jpeg",
               star: 0,

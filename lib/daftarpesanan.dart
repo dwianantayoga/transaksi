@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './detail_produk.dart'; 
 
 // menggunakan gesture detector dan navigator 
-class ProdukList extends StatelessWidget {
+class Daftarpesanan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +10,7 @@ class ProdukList extends StatelessWidget {
         title:
           // menyusun tulisan secara horizontal dan di tengah
             Row(children: <Widget>[
-          new Text("Data Barang",style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+          new Text("Daftar Pesanan",style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
         ]),
         actions: <Widget>[
           
@@ -27,19 +27,19 @@ class ProdukList extends StatelessWidget {
                 new MaterialPageRoute(
                     builder: (BuildContext context) => DetailProduk( //builder memanggil class yang ada di detail produk
                           //kemudian mengirim parameter, untuk menampilkan identitas
-                          name: "GITAR",
-                          description: "Jumlah Stok Barang",
+                          name: "#87232319",
+                          description: "Mei 15, 2021 at 6:00PM",
                           price: 200000,
                           image: "gitar_satu.jpeg",
-                          star: 0,
+                          star:0 ,
                         )),
               );
             },
             //memanggil class local produkbox
             child: ProductBox(
               //berisikan parameter yang dibutuhkan produkbox
-              nama: "GITAR",
-              deskripsi: "Jumlah Stok Barang",
+              nama: "#87232319",
+              deskripsi: "Mei 15, 2021 at 6:00PM",
               harga: 200000,
               image: "gitar_satu.jpeg",
               star: 0,
@@ -50,8 +50,8 @@ class ProdukList extends StatelessWidget {
               Navigator.of(context).push(
                 new MaterialPageRoute(
                     builder: (BuildContext content) => DetailProduk(
-                          name: "DRUM",
-                          description: "Jumlah Stok Barang",
+                          name: "#971829219",
+                          description: "Mei 20,2021 at 8:00PM",
                           price: 1500000,
                           image: "drum_dua.jpeg",
                           star: 0,
@@ -59,59 +59,56 @@ class ProdukList extends StatelessWidget {
               );
             },
             child: ProductBox(
-              nama: "DRUM",
-              deskripsi: "Jumlah Stok Barang",
+              nama: "#971829219",
+              deskripsi: "Mei 20,2021 at 8:00PM",
               harga: 1500000,
               image: "drum_dua.jpeg",
               star: 0,
             ),
           ),
-          new GestureDetector(
-            onTap: () {
-              Navigator.of(context).push(
-                new MaterialPageRoute(
-                    builder: (BuildContext content) => DetailProduk(
-                          name: "PIANO",
-                          description: "Jumlah Stok Barang",
-                          price: 15000000,
-                          image: "piano_lima.jpeg",
-                          star: 0,
-                        )),
-              );
-            },
-            child: ProductBox(
-              nama: "PIANO",
-              deskripsi: "Jumlah Stok Barang ",
-              harga: 15000000,
-              image: "piano_lima.jpeg",
-              star: 0,
-            ),
-          ),
-          new GestureDetector(
-            onTap: () {
-              Navigator.of(context).push(
-                new MaterialPageRoute(
-                    builder: (BuildContext content) => DetailProduk(
-                          name: "SEXOPHONE",
-                          description: "Jumlah Stok Barang",
-                          price: 600000,
-                          image: "sexophone_empat.jpeg",
-                          star: 0,
-                        )),
-              );
-            },
-            child: ProductBox(
-              nama: "SEXAPHONE",
-              deskripsi: "Jumlah Stok Barang",
-              harga: 600000,
-              image: "sexophone_empat.jpeg",
-              star: 0,
-            ),
-          ),
-          
+           Container(
+            color: Colors.red[400],
+            padding: const EdgeInsets.all(10),
+//untuk membuat tampilan secara horizontal digunakan row
+            child: Row(
+              children: [
+                Expanded( // dihabiskan agar tidak terlalu kekiri dan terlalu kekanan
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Tolak',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
+                    ],
+                  ),
+                ),
         ],
       ),
-    );
+    ),
+     Container(
+            color: Colors.green[400],
+            padding: const EdgeInsets.all(10),
+//untuk membuat tampilan secara horizontal digunakan row
+            child: Row(
+              children: [
+                Expanded( // dihabiskan agar tidak terlalu kekiri dan terlalu kekanan
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Proses',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
+                    ],
+                  ),
+                ),
+        ],
+      ),
+    )
+    ]));
   }
 }
 

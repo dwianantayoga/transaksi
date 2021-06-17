@@ -47,15 +47,12 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/appimages/angkringan.jpeg
-    - assets/appimages/gambar_diri.jpeg
-    - assets/appimages/nasi_bakar.jpeg
-    - assets/appimages/sate_usus.jpeg
-    - assets/appimages/sosis_bakar.jpeg
-    - assets/appimages/telur_puyuh.jpeg
-    - assets/appimages/tempe_bacem.jpeg
-    - assets/appimages/wedang_jahe.jpeg
-    - assets/appimages/latar.jpeg
+    - assets/appimages/gitar_satu.jpeg
+    - assets/appimages/transaksi.jpeg
+    - assets/appimages/drum_dua.jpeg
+    - assets/appimages/piano_lima.jpeg
+    - assets/appimages/sexophone_empat.jpeg
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:

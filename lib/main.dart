@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:aplikasi_angkringan/ui/home.dart';
+
 import './dashboard.dart' as dashboard;
 import './productlist.dart' as produklist;
+import './updatebarang.dart' as updatebarang;
+import './daftarpesanan.dart' as daftarpesanan;
 
 void main() {
   runApp(new MaterialApp(
     title: "tab Bar",
-    home: Home(),
+    home: new MyApp(),
   ));
 }
 
@@ -19,7 +21,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   TabController controller; //nama variabel
   @override
   void initState() { //inisiasi menggunakan controller
-    controller = new TabController(vsync: this, length: 2);
+    controller = new TabController(vsync: this, length: 4);
     super.initState();
   }
 //menggunakan dispose untuk berpindah halaman,ketika mengklik yang aktif maka yg lain akan di close
@@ -37,15 +39,20 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
           children: <Widget>[ // menggunakan children karena tabbarview dapat menggunakan banyak widget
             new dashboard.Dashboard(),
             new produklist.ProdukList(),
+            new updatebarang.Updatebarang(),
+            new daftarpesanan.Daftarpesanan(),
           ],
         ),
         bottomNavigationBar: new Material( //navigatornya berada dibagian bawah
-          color: Colors.blue,
+          color: Colors.white60,
           child: new TabBar(
             controller: controller,
             tabs: <Widget>[
-              new Tab(icon: new Icon(Icons.home)),//tab icon ini mengontrol dashboard
-              new Tab(icon: new Icon(Icons.list)) //tab icon ini mengontrol produklist
+              new Tab(icon: new Icon(Icons.home,color: Colors.black,)),//tab icon ini mengontrol dashboard
+              new Tab(icon: new Icon(Icons.list, color: Colors.black,)), //tab icon ini mengontrol produklist
+              new Tab(icon: new Icon(Icons.add_chart, color: Colors.black,)), //tab icon ini mengontrol produklist
+              new Tab(icon: new Icon(Icons.add_shopping_cart, color: Colors.black,)), //tab icon ini mengontrol produklist
+              
             ],
           ),
         )
